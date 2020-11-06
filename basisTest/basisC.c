@@ -1,5 +1,6 @@
-# include <stdio.h>
-
+# include "stdio.h"
+/*
+// test
 int getNumber(int oneday)
 {
 	int num;
@@ -9,7 +10,7 @@ int getNumber(int oneday)
 	else
 	{
 		num = (getNumber(oneday + 1) + 1) * 2;
-		printf("ç¬¬%så¤©è¿˜æœ‰%d\n", oneday, num);
+		printf("µÚ%sÌì»¹ÓĞ%d\n", oneday, num);
 	}
 	return num;
 }
@@ -18,8 +19,93 @@ int getNumber(int oneday)
 int main()
 {
 	int num = getNumber(1);
-	printf("ç¬¬ä¸€å¤©%d \n", num);
+	printf("%d \n", num);
 	return 0;
 }
+*/
+
+
+/*
+int getAge(int age)
+{
+	return age == 1 ? 10 : getAge(age - 1) + 2;
+}
+
+int main()
+{
+	printf("µÚÎåÎ»ssssa %d \n", getAge(5));
+	return 0;
+}
+*/
+/*
+#include "hiC.c"
+
+int main()
+{
+	int arr[5] = {7, 8, 5, 6, 9};
+	printLine();
+	temp(arr);
+	printLine();
+	return 0;
+}
+*/
+
+// Êä³öÊı×é
+void temp(double arr[], int length)
+{
+	int i;
+	for (i = 0; i < length; i++)
+	{
+		if (i != length - 1)
+		{
+			printf("%1.2f, ", arr[i]);
+		}
+		else
+		{
+			printf("%1.2f", arr[i]);
+		}
+		
+	}	
+}
+
+
+// Ã°ÅİÅÅĞò
+void bubb(double arr[], int length)
+{
+	int i, j;
+	printf("**********ÅÅĞòÇ°***********\n");
+	temp(arr, length);
+	// ¿ªÊ¼½øĞĞÃ°ÅİÅÅĞò
+	for (i = 0; i < length - 1; i++)
+	{
+		for (j = i + 1; j < length; j++)
+		{
+			if (arr[i] > arr[j])
+			{
+				double num;
+				num = arr[i];
+				arr[i] = arr[j];
+				arr[j] = num;
+			}
+		}
+	}
+	printf("\n**********ÅÅĞòºó***********\n");
+	temp(arr, length);
+
+}
+
+// Ö÷Èë¿Ú
+int main()
+{
+	double arr[] = {1.78, 1.69, 1.98, 1.62, 1.32, 1.11, 1.99, 1.87, 1.82, 1.66, 1.30};
+	// »ñÈ¡Êı×é³¤¶È£¬Êı×é×Ü×Ö½ÚÊı/µ¥Ò»Êı¾İµÄ×Ö½Ú³¤¶È
+	int length = sizeof(arr)/sizeof(arr[0]);
+	bubb(arr, length);
+	return 0;
+}
+
+
+
+
 
 
