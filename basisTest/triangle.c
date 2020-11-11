@@ -20,6 +20,9 @@ int main(int argc, char const *argv[])
 }
 */
 
+
+// ³Ë·¨±í
+/* 
 int main(int argc, char const *argv[])
 {
 	int i, j;
@@ -33,6 +36,18 @@ int main(int argc, char const *argv[])
 	}
 	return 0;
 }
+*/
+
+
+#include "string.h"
+
+int main(int argc, char const *argv[])
+{
+	char arr[] = {'s', 'd', 'f', 'w', '0'};
+	printf("%d\n", strlen(arr));
+	return 0;
+}
+
 
 
 

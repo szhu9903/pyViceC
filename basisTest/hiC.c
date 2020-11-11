@@ -1,5 +1,6 @@
 // 头文件
 # include "stdio.h"
+/*
 // 定义不可变常量
 # define NAMES "定义不可改变常量消息头信息"
 
@@ -16,4 +17,18 @@ int main(int argc, char const *argv[])
 		num -= 1;
 	}while (num >= 0);
 	return 0;
+}
+*/
+static void temp(int arr[])
+{
+	int i;
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+}
+
+extern void printLine()
+{
+	printf("****************\n");
 }
