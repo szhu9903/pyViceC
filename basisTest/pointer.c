@@ -22,6 +22,7 @@
 */
 // const int MAX = 3;
 
+/* 指针操作数组
 void prtdata(int arr[], int m)
 {
 	int i, *ptr;
@@ -44,3 +45,28 @@ int main()
 	return 0;
 
 }
+*/
+
+# include "stdio.h"
+
+// 指针数组：将指针存放在数组中
+int main()
+{
+	int arr[] = {15, 16, 19};
+	// 获取数组长度
+	int arrlen = sizeof(arr)/sizeof(arr[0]);
+	// 定义存放指针的数组
+	int i, *ptr[arrlen];
+
+	for (i = 0; i < arrlen; i++)
+	{
+		ptr[i] = &arr[i];
+	}
+	for (i = 0; i < arrlen; i++)
+	{
+		printf("arr[%d]=%d \n", i, *ptr[i]);
+	}
+
+}
+
+
