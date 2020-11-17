@@ -1,4 +1,4 @@
-# pyViceC python C
+# pyViceC 
 
 ### 数据类型
 1. 举例int
