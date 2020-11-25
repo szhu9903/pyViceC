@@ -1,70 +1,35 @@
 # include "stdio.h"
 
 /*
-	scanf("%f", &weight); ½ÓÊÕÓÃ»§ÊäÈë£¬×¢ÒâÊı¾İÀàĞÍ 
-	\a :¾¯±¨
+	scanf("%f", &weight); è¯»å–ç”¨æˆ·è¾“å…¥
+	\a :è­¦å‘ŠÂ¨
+	strlen : å­—ç¬¦ä¸²é•¿åº¦
+	string.h : å­—ç¬¦ä¸²ä¾èµ–å¯¼å…¥
 */
 
-
-/*
-int main(int argc, char const *argv[])
-{
-	int i, j, k;
-	for (i = 1; i <= 5; i++)
-	{
-		for (j = i; j < 5; j++)
-		{
-			printf(" ");
-		}
-		for (k = 0; k < (2 * i) - 1; k++)
-		{
-			printf("*");
-		}
-		printf("\n");
-	}
-	return 0;
-}
-*/
-
-// ³Ë·¨±í
-/* 
-int main(int argc, char const *argv[])
-{
-	int i, j;
-	for (i = 1; i <= 9; i++)
-	{
-		for (j = 1; j <= i; j++)
-		{
-			printf("%d*%d=%d  ", j, i, i * j);
-		}
-		printf("\n");
-	}
-	return 0;
-}
-*/
-
-/*
-#include "string.h"
-int main(int argc, char const *argv[])
-{
-	char arr[] = {'s', 'd', 'f', 'w', '0'};
-	printf("%d\n", strlen(arr));
-	return 0;
-}
-*/
-
+// 
+#include <windows.h>
+#include <stdlib.h>
+#include <time.h>
 int main()
 {
-	float weight, value;
-	printf("plase enter your weight in pounds:");
-	scanf("%f", &weight);
-	value = 1700.0 * weight * 14.583;
-	printf("%.2f\n", value);
+	int a = 2880;
+	system("color 0a");
+	while (a >= 0)
+	{
+
+		time_t nowtime = time(NULL);
+		struct tm *now;
+		now = localtime(&nowtime);
+		printf("[%04d-%02d-%02d %02d:%02d:%02d]\n", 
+		now->tm_year+1900, now->tm_mon+1, now->tm_mday, 
+		now->tm_hour, now->tm_min, now->tm_sec);
+		Sleep(10000);
+		system("cls");
+		a = a - 1;
+	}
 	return 0;
 }
-
-
-
 
 
 
