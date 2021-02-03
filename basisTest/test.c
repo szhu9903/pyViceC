@@ -7,7 +7,19 @@
 	string.h : 字符串依赖导入
 */
 
-// 
+int main()
+{
+	// 数组初始化，初始化其中部分元素
+	int arr[10] = {5, 6};
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+	return 0;
+}
+
+
+/* 实例
 #include <windows.h>
 #include <stdlib.h>
 #include <time.h>
@@ -30,7 +42,7 @@ int main()
 	}
 	return 0;
 }
-
+*/
 
 
 
