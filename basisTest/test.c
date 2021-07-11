@@ -1,59 +1,25 @@
-# include "stdio.h"
+#include <stdio.h>
 
-/*
-	scanf("%f", &weight); 读取用户输入
-	\a :警告¨
-	strlen : 字符串长度
-	string.h : 字符串依赖导入
-*/
+void hanoi(int, char, char, char);
 
-int main()
+void hanoi(int n, char x, char y, char z)
 {
-	// 数组初始化，初始化其中部分元素
-	int arr[10] = {5, 6};
-	for (int i = 0; i < 10; i++)
+	if (n == 1)
 	{
-		printf("%d\n", arr[i]);
+		printf("%c-->%c \n", x, z);
+	}else{
+		hanoi(n - 1, x, z, y);
+		printf("%c-->%c \n", x, z);
+		hanoi(n - 1, y, x, z);
 	}
-	return 0;
 }
 
 
-/* 实例
-#include <windows.h>
-#include <stdlib.h>
-#include <time.h>
-int main()
+int main(void)
 {
-	int a = 2880;
-	system("color 0a");
-	while (a >= 0)
-	{
-
-		time_t nowtime = time(NULL);
-		struct tm *now;
-		now = localtime(&nowtime);
-		printf("[%04d-%02d-%02d %02d:%02d:%02d]\n", 
-		now->tm_year+1900, now->tm_mon+1, now->tm_mday, 
-		now->tm_hour, now->tm_min, now->tm_sec);
-		Sleep(10000);
-		system("cls");
-		a = a - 1;
-	}
+	int n;
+	printf("请输入层数：");
+	scanf("%d", &n);
+	hanoi(n, 'X', 'Y', 'Z');
 	return 0;
 }
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-

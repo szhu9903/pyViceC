@@ -46,27 +46,144 @@ int main()
 
 }
 */
+/* 指针数组
+#include <stdio.h>
 
-# include "stdio.h"
-
-// 指针数组：将指针存放在数组中
 int main()
 {
-	int arr[] = {15, 16, 19};
-	// 获取数组长度
-	int arrlen = sizeof(arr)/sizeof(arr[0]);
-	// 定义存放指针的数组
-	int i, *ptr[arrlen];
-
-	for (i = 0; i < arrlen; i++)
+	char *point_array[5] = {
+		"JAVA",
+		"Python",
+		"C",
+		"C++",
+		"GO"
+	};
+	printf("test data %s", point_array[0]);
+	for(int i = 0; i < 5; i++)
 	{
-		ptr[i] = &arr[i];
+		printf("data %s \n", point_array[i]);
 	}
-	for (i = 0; i < arrlen; i++)
-	{
-		printf("arr[%d]=%d \n", i, *ptr[i]);
-	}
-
+	return 0;
 }
+*/
+
+
+/* 数组指针
+#include <stdio.h>
+
+int main()
+{
+	int tmp[5] = {1, 2, 3, 4, 5};
+	int (*targer)[5] = &tmp;
+	int i;
+	for (i = 0; i < 5; i++)
+	{
+		printf("test data %d \n", *(*targer + i));
+	}
+	return 0;
+}
+	
+*/
+
+
+// #include <stdio.h>
+
+// int main()
+// {
+// 	int num = 1222;
+// 	int *pn = &num;
+// 	char *pc = "szhu";
+// 	void *vp;
+
+// 	vp = pn;
+// 	printf("pn: %p , vp: %p\n", pn, vp);
+// 	printf("num %d \n", *(int *)vp);
+// 	vp = pc;
+// 	printf("pc: %p, vp:%p \n", pc, vp);
+// 	printf("vp %s \n", (char *)vp);
+// 	return 0;
+// }
+
+
+/* 指针的指针
+#include <stdio.h>
+
+int main()
+{
+	char *tmp[6] = {
+		"java",
+		"Python",
+		"C",
+		"C++",
+		"VUE",
+		"Flask"
+	};
+	char **mylike;
+	char **alltest[5];
+	mylike = &tmp[1]; //指向指针的地址，指向指针的指针
+	alltest[0] = &tmp[0];
+	alltest[1] = &tmp[2];
+	alltest[2] = &tmp[3];
+	alltest[3] = &tmp[4];
+	alltest[4] = &tmp[5];
+	printf("my like %s \n", *mylike);
+	printf("all test %s  \n", *alltest[1]);
+	return 0;
+}
+*/
+
+
+#include <stdio.h>
+
+int sum(int);
+
+int sum(int num)
+{
+	if (num > 0)
+	{
+		return (num + 1) * (num / 2);
+	}
+	return 0;
+}
+
+int main()
+{
+	int num;
+	printf("请输入无符号数字：");
+	scanf("%d", &num);
+	printf("计算结果 %d \n", sum(num));
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
