@@ -1,0 +1,11 @@
+.DS_Store
+
+*CMakeLists.txt
+
+cmake-build-debug
+
+# Editor directories and files
+.idea
+.vscode
+*test.c
+
