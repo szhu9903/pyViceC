@@ -9,7 +9,7 @@ void sort_array(int array[], int left, int right)
 	int flag_num;
 	int tmp;
 	flag_num = array[(left + right) / 2];
-	while (i < j)
+	while (i <= j)
 	{
 		while (array[i] < flag_num)
 		{
